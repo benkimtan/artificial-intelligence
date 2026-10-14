@@ -76,7 +76,7 @@ ollama pull llama3.2
 
 ### 5. Build your Chroma database
 
-The apps query an existing Chroma store, so you need to ingest your documents first using your ingestion script, "documentEmbed".py. By default the apps expect:
+The apps query an existing Chroma store, so you need to ingest your documents first using your ingestion script, `python documentEmbed.py`. By default the apps expect:
 
 - DB folder: `./chroma_db`
 - Collection name: `documents`
@@ -146,6 +146,7 @@ Opens in your browser (`-w` enables auto-reload while you edit). Settings are re
 | Empty or near-empty ingestion from a PDF | The PDF is probably a scan with no text layer. `pypdf` can't read it; you'd need OCR first. |
 | Chunks look ragged after PDF ingestion | PDFs contain hard line breaks mid-sentence. Join them before chunking: `re.sub(r"\n(?!\n)", " ", text)`. |
 | Slow first run | `sentence-transformers` downloads the embedding model the first time it's used. |
+| No module named torchvision error | As we are not using machine vision in streamlit, you can ignore this. |
 
 ## Notes on chunking
 
