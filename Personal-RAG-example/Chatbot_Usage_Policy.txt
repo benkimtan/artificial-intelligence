@@ -1,0 +1,142 @@
+SHOPSPHERE ONLINE RETAIL PVT. LTD.
+RETURNS & REFUNDS CHATBOT — ACCEPTABLE USE POLICY
+Document Version 1.0 | Effective Date: 10 July 2026
+Applies to: All Customers Using the Website / App Chatbot
+================================================================
+
+
+1. PURPOSE & SCOPE
+--------------------------------
+This policy explains how customers should use the automated chatbot
+("Assistant") provided on our website and mobile app for handling
+product return, refund, and exchange requests. It sets clear
+expectations on acceptable use so that the Assistant can serve you
+quickly, accurately, and securely. This policy applies to every
+customer who interacts with the Assistant, whether as a guest or a
+registered account holder.
+
+
+2. WHAT THIS ASSISTANT IS DESIGNED FOR
+--------------------------------
+The Assistant is a dedicated support tool built specifically to help
+you with the return and refund journey. It is not a general-purpose
+assistant, and its responses are only reliable within the scope
+described below.
+
+
+3. RECOMMENDED USE — "DO"
+--------------------------------
+  [x] Use the Assistant to check return eligibility, initiate a
+      return, or track a refund status.
+
+  [x] Provide your order ID, order email, or registered mobile number
+      when asked, to help the Assistant locate your order accurately.
+
+  [x] Ask about return windows, exchange options, pickup scheduling,
+      and refund timelines for items purchased on this website.
+
+  [x] Upload clear photos of damaged or defective items when the
+      Assistant requests them.
+
+  [x] Use simple, direct language describing your issue (e.g. "I want
+      to return order #12345, item arrived damaged").
+
+  [x] Escalate to a human support agent using the "Talk to an agent"
+      option if the Assistant cannot resolve your query.
+
+  [x] Report any incorrect, offensive, or suspicious chatbot behaviour
+      to customer.care@shopsphere.example so we can review and
+      improve it.
+
+
+4. PROHIBITED & OUT-OF-SCOPE USE — "DON'T"
+--------------------------------
+  [ ] Don't ask the Assistant to solve mathematical, logical, or
+      general-knowledge problems unrelated to your order (e.g.
+      equations, puzzles, trivia). It is not built or approved for
+      this and may give incorrect results.
+
+  [ ] Don't ask it to write essays, code, emails, or other unrelated
+      content generation tasks — this is outside its authorised
+      purpose.
+
+  [ ] Don't share sensitive personal data it hasn't asked for, such as
+      full card numbers, CVV, bank passwords, or government ID
+      numbers. The Assistant will never request these.
+
+  [ ] Don't rely on the Assistant for legal, medical, tax, or
+      financial advice.
+
+  [ ] Don't use the Assistant to place new orders, negotiate prices,
+      or seek discounts outside published offers — it cannot
+      authorise these.
+
+  [ ] Don't attempt to manipulate, "jailbreak", or trick the Assistant
+      into ignoring its instructions or role-playing as a different
+      system.
+
+  [ ] Don't submit abusive, threatening, or fraudulent claims (e.g.
+      false damage reports); such conduct may lead to account review
+      or suspension.
+
+  [ ] Don't treat chatbot responses as final legal confirmation —
+      refunds and approvals are only final once confirmed in your
+      registered email or order dashboard.
+
+
+5. DATA HANDLING & PRIVACY
+--------------------------------
+Conversations with the Assistant, including any images you upload,
+are stored to process your return and to improve service quality.
+This data is handled in accordance with our Privacy Policy. Do not
+share information about other people (such as a family member's card
+details) through the chat.
+
+
+6. ACCURACY, LIMITATIONS & ESCALATION
+--------------------------------
+The Assistant uses automated logic and may occasionally misunderstand
+a request or provide an incomplete answer, particularly for complex,
+multi-order, or policy-exception cases. If a response seems
+incorrect, unclear, or if your situation falls outside standard
+return rules (e.g. a return past the eligibility window due to
+exceptional circumstances), please use the "Talk to an agent" option
+to reach a human representative. The Assistant does not replace your
+statutory consumer rights.
+
+
+7. ACCEPTABLE CONDUCT
+--------------------------------
+Please interact with the Assistant respectfully. Abusive language,
+spam messages, or repeated attempts to misuse the Assistant for
+purposes outside this policy may result in the chat session being
+ended, temporary throttling, or referral of your account for review
+under our Terms of Use.
+
+
+8. DISCLAIMER & LIABILITY
+--------------------------------
+This Assistant is provided as a convenience tool to support your
+return experience. While we aim for accuracy, ShopSphere Online
+Retail Pvt. Ltd. is not liable for decisions made solely on an
+unconfirmed chatbot response. All refunds, approvals, and exceptions
+are governed by our published Returns & Refunds Policy, which takes
+precedence over any chatbot output in case of conflict.
+
+
+9. CHANGES TO THIS POLICY
+--------------------------------
+We may update this policy from time to time as the Assistant's
+capabilities evolve. The latest version will always be available on
+this page, with the effective date shown at the top.
+
+
+----------------------------------------------------------------
+NEED FURTHER HELP?
+Use "Talk to an agent" in the chat window, email
+customer.care@shopsphere.example, or call our support line listed on
+the Contact Us page.
+----------------------------------------------------------------
+
+By using the Returns & Refunds chatbot, you acknowledge that you have
+read and agree to this Acceptable Use Policy.
