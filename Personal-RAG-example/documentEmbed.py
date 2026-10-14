@@ -34,7 +34,7 @@ from chromadb.utils import embedding_functions
 # The file to chunk and embed when you run this script. Supports .txt and .pdf.
 # Example: INPUT_FILE = "./docs/employee_handbook.pdf"
 # Leave as None to use the small built-in sample text instead.
-INPUT_FILE = "./Chatbot_Usage_Policy.txt"
+INPUT_FILE = "./Chatbot_Usage_Policy.pdf"
 
 # Questions to try against the ingested file when running this script.
 # Replace these with questions that make sense for YOUR document.
