@@ -14,7 +14,7 @@ import chainlit as cl
 from rag_core import (
     CHROMA_DB_PATH, COLLECTION_NAME, EMBEDDING_MODEL,
     OLLAMA_BASE_URL, OLLAMA_MODEL, OLLAMA_TEMPERATURE, DEFAULT_SYSTEM_PROMPT,
-    get_collection, get_client, retrieve, build_prompt,
+    get_collection, get_async_client, retrieve, build_prompt, ask_ollama_stream_async,
 )
 
 K = 4  # number of chunks to retrieve; edit here or wire up cl.ChatSettings if you want it configurable in the UI
@@ -30,7 +30,7 @@ async def start():
         ).send()
         return
 
-    client = get_client(OLLAMA_BASE_URL)
+    client = get_async_client(OLLAMA_BASE_URL)
     cl.user_session.set("collection", collection)
     cl.user_session.set("client", client)
 
@@ -69,19 +69,10 @@ async def main(message: cl.Message):
     await msg.send()
 
     try:
-        stream = client.chat.completions.create(
-            model=OLLAMA_MODEL,
-            messages=[
-                {"role": "system", "content": DEFAULT_SYSTEM_PROMPT},
-                {"role": "user", "content": prompt},
-            ],
-            temperature=OLLAMA_TEMPERATURE,
-            stream=True,
-        )
-        for chunk in stream:
-            piece = chunk.choices[0].delta.content or ""
-            if piece:
-                await msg.stream_token(piece)
+        async for piece in ask_ollama_stream_async(
+            client, OLLAMA_MODEL, OLLAMA_TEMPERATURE, DEFAULT_SYSTEM_PROMPT, prompt
+        ):
+            await msg.stream_token(piece)
     except Exception as e:
         msg.content = f"Error calling Ollama: {e}\n\nIs Ollama running? Try: `ollama serve`"
 

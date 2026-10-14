@@ -6,14 +6,14 @@ chainlit_app.py so the retrieval/prompting logic lives in exactly one place.
 
 import chromadb
 from chromadb.utils import embedding_functions
-from openai import OpenAI
+from openai import AsyncOpenAI, OpenAI
 
-# >>> Chroma DB settings — must match your ingestion script <<<
+# Chroma DB settings — must match your ingestion script
 CHROMA_DB_PATH = "./chroma_db"
 COLLECTION_NAME = "documents"
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"  # routes through SentenceTransformerEmbeddingFunction
 
-# >>> Ollama connection settings (served via its OpenAI-compatible API) <<<
+# Ollama connection settings (served via its OpenAI-compatible API)
 OLLAMA_BASE_URL = "http://localhost:11434/v1"
 OLLAMA_MODEL = "llama3.2:latest"
 OLLAMA_TEMPERATURE = 0.0
@@ -42,6 +42,11 @@ def get_client(base_url: str = OLLAMA_BASE_URL) -> OpenAI:
     """OpenAI-compatible client pointed at a local Ollama server."""
     # Ollama doesn't check the API key, but the OpenAI client requires a non-empty string.
     return OpenAI(base_url=base_url, api_key="ollama")
+
+
+def get_async_client(base_url: str = OLLAMA_BASE_URL) -> AsyncOpenAI:
+    """Async OpenAI-compatible client, for async frameworks such as Chainlit."""
+    return AsyncOpenAI(base_url=base_url, api_key="ollama")
 
 
 def retrieve(collection, question: str, k: int = 4):
@@ -81,6 +86,19 @@ def ask_ollama_stream(client: OpenAI, model: str, temperature: float, system_pro
     ]
     response = client.chat.completions.create(model=model, messages=messages, temperature=temperature, stream=True)
     for chunk in response:
+        piece = chunk.choices[0].delta.content or ""
+        if piece:
+            yield piece
+
+
+async def ask_ollama_stream_async(client: AsyncOpenAI, model: str, temperature: float, system_prompt: str, prompt: str):
+    """Async generator that yields text pieces as they stream in (non-blocking)."""
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": prompt},
+    ]
+    response = await client.chat.completions.create(model=model, messages=messages, temperature=temperature, stream=True)
+    async for chunk in response:
         piece = chunk.choices[0].delta.content or ""
         if piece:
             yield piece
